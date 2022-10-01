@@ -1,6 +1,15 @@
 import React from "react";
-import styled,{css} from "styled-components";
+import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 
+const Container=styled.div`
+    background-color: #F1F1F3;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 95%;
+    margin: 0 auto;
+`;
 const Bar = styled.div`
     background-color: #1447ff;
     width: ${(props)=> (props.pagenum)*25}%;
@@ -27,26 +36,37 @@ const PlayImg=styled.img`
 `;
 
 const MusicBar=({pagenum, currenttime})=>{
-    console.log(pagenum)
-    if(pagenum==1){
-
+    const navi=useNavigate();
+    const onClickNext=()=>{
+        if(pagenum+1<5){
+            navi(`/${pagenum+1}`);
+        }else{
+            navi('/1');
+        }
+    }
+    const onClickPrev=()=>{
+        if(pagenum-1>0){
+            navi(`/${pagenum-1}`);        
+        }else{
+            navi('/4');        
+        }
     }
     return(
-        <>
+        <Container>
             <Box>
                 <Bar pagenum={pagenum}/>
                 <Bar1 pagenum={pagenum}/>
             </Box>
             <Box align="time">
-                <div>04:14</div>
-                <div>08:28</div>                
+                <div>{currenttime}</div>
+                <div>05:16</div>                
             </Box>
             <Box align="play">
-                <PlayImg src='./images/backplay.png' alt='play'/>
+                <PlayImg onClick={onClickPrev} style={{marginRight:'5px'}} src='./images/backplay.png' alt='play'/>
                 <PlayImg src='./images/play.png' alt='play'/>
-                <PlayImg src='./images/afterplay.png' alt='play'/>
+                <PlayImg onClick={onClickNext} style={{marginLeft:'5px'}} src='./images/afterplay.png' alt='play'/>
             </Box>
-        </>
+        </Container>
     );
 }
 
