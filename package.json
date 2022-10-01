@@ -1,0 +1,19 @@
+{
+  "name": "s-playlist",
+  "version": "1.0.0",
+  "description": "신빅해 본선 레포",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Co-buying/S-pLayList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Co-buying/S-pLayList/issues"
+  },
+  "homepage": "https://github.com/Co-buying/S-pLayList#readme"
+}
