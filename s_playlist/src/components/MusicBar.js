@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
+import Modal from './Modal';
 
 const Container=styled.div`
     background-color: #F1F1F3;
@@ -36,6 +37,14 @@ const PlayImg=styled.img`
 `;
 
 const MusicBar=({pagenum, currenttime})=>{
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => {
+      setModalOpen(true);
+    };
+    const closeModal = () => {
+      setModalOpen(false);
+    };
     const navi=useNavigate();
     const onClickNext=()=>{
         if(pagenum+1<5){
@@ -63,7 +72,11 @@ const MusicBar=({pagenum, currenttime})=>{
             </Box>
             <Box align="play">
                 <PlayImg onClick={onClickPrev} style={{marginRight:'5px'}} src='./images/backplay.png' alt='play'/>
-                <PlayImg src='./images/play.png' alt='play'/>
+                <PlayImg onClick={openModal} src='./images/play.png' alt='play'/>
+                <Modal open={modalOpen} close={closeModal} header="Shinhan pLayList 이용 팁">
+                    되감기, 빨리감기 버튼을 누르면 페이지를 이동할 수 있어요.<br/>
+                    3페이지의 '나의 소BTI'를 누르면 상세보기가 가능해요.
+                </Modal>
                 <PlayImg onClick={onClickNext} style={{marginLeft:'5px'}} src='./images/afterplay.png' alt='play'/>
             </Box>
         </Container>

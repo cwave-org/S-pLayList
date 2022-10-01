@@ -15,7 +15,7 @@ const Title=styled.div`
 `;
 const IUback=styled.div`
     text-align: center;
-    z-index: 3;
+    /* z-index: 0; */
     margin: -30% auto 0;
     /* margin-top: -30%; */
     position: fixed;
