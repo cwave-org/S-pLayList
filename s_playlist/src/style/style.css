@@ -1,0 +1,12 @@
+html,
+body {
+    background-color: #F1F1F3;
+}
+
+.title{
+    background: linear-gradient(to right top, #814b5c, #22c242);
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-style: italic;
+}
