@@ -1,6 +1,6 @@
 import React from "react";
+import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
-import Button from "../component/Button";
 
 const ChartNBTI=()=>{
 
