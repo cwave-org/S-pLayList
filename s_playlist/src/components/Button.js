@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled, { css } from "styled-components";
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
@@ -52,12 +53,27 @@ const VARIANTS = {
 function Button({ disabled, size, variant, children }) {
   const sizeStyle = SIZES[size];
   const variantStyle = VARIANTS[variant];
+  const name = children;
+
+  const id=1;
+
+  const navigate = useNavigate();
+  const onMoving = (event) => {
+    if(event.target.id == "시작하기"){
+      console.log("시작하기 버튼 클릭")
+      navigate(`/tastetestque`, {
+        state: { pageId: id, score: 0 },
+      });
+    }
+  };
 
   return (
     <StyledButton
       disabled={disabled}
       sizeStyle={sizeStyle}
       variantStyle={variantStyle}
+      id={name}
+      onClick={onMoving}
     >
       {children}
     </StyledButton>
