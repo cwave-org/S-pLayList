@@ -1,6 +1,9 @@
+
 import React, { useEffect, useState } from "react";
 import '../style/myalbum.css'; 
 import '../style/style.css';
+import MusicBar from "../components/MusicBar";
+
 
 const MyAlbum=()=>{
 
@@ -33,9 +36,11 @@ const MyAlbum=()=>{
             <p>숙명여자대학교 소프트웨어학부 졸</p>
             <p>Fax = 002 - 1234 - 5678</p>
         </div>
-    </>
 
-    )
+
+        <MusicBar pagenum={1} />
+        </>
+        )
 }
 
 export default MyAlbum;
