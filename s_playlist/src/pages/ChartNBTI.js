@@ -11,7 +11,7 @@ const ChartNBTI=()=>{
             <Button size="sm" children="이 달의 소비" variant="default_fill"/>
         <p>
         nbti 화면입니다
-        <MusicBar pagenum={3} />
+        <MusicBar pagenum={3} currenttime={"03:57"}/>
         </p>
         </div>
     )

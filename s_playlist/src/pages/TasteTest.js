@@ -6,7 +6,7 @@ const TasteTest=()=>{
     return(
         <>
         test화면
-        <MusicBar pagenum={2} />
+        <MusicBar pagenum={2} currenttime={"02:38"}/>
         </>
     )
 }

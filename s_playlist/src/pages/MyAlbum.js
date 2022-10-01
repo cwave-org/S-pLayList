@@ -63,7 +63,7 @@ const MyAlbum=()=>{
         </div>
 
 
-        <MusicBar pagenum={1} />
+        <MusicBar pagenum={1} currenttime={"01:19"} />
         </>
         )
 }

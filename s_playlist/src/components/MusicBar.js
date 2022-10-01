@@ -27,7 +27,6 @@ const PlayImg=styled.img`
 `;
 
 const MusicBar=({pagenum, currenttime})=>{
-    console.log(pagenum)
     if(pagenum==1){
 
     }
@@ -38,13 +37,13 @@ const MusicBar=({pagenum, currenttime})=>{
                 <Bar1 pagenum={pagenum}/>
             </Box>
             <Box align="time">
-                <div>04:14</div>
-                <div>08:28</div>                
+                <div>{currenttime}</div>
+                <div>05:16</div>                
             </Box>
             <Box align="play">
-                <PlayImg src='./images/backplay.png' alt='play'/>
+                <PlayImg style={{marginRight:'5px'}} src='./images/backplay.png' alt='play'/>
                 <PlayImg src='./images/play.png' alt='play'/>
-                <PlayImg src='./images/afterplay.png' alt='play'/>
+                <PlayImg style={{marginLeft:'5px'}} src='./images/afterplay.png' alt='play'/>
             </Box>
         </>
     );
