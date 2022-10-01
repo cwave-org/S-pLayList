@@ -5,7 +5,12 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="title">
+      <b><h1 className="titletext">IU Pallet</h1></b>
+    </div>
+    <div className="back">
+      <App />
+    </div>
   </React.StrictMode>
 );
 

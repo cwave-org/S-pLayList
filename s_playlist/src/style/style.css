@@ -3,10 +3,24 @@ body {
     background-color: #F1F1F3;
 }
 
+.back{
+    margin-top: 33%;
+}
+
 .title{
-    background: linear-gradient(to right top, #814b5c, #22c242);
-    color: transparent;
+    margin-top: -32%;
+    position: fixed;
+    width: 100%;
+    background-color: #F1F1F3;
+    outline:0; resize:none
+}
+
+.titletext{
+    background: linear-gradient(to right top, #c9a9b3, #a110e4);
     -webkit-background-clip: text;
-    text-align: center;
+    -webkit-text-fill-color: transparent;
     font-style: italic;
+    text-align: center;
+    margin-top:5%;
+    margin-bottom:5%;
 }
