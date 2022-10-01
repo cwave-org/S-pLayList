@@ -2,20 +2,21 @@ import React from "react";
 import MusicBar from './../components/MusicBar';
 import PlayList from "../components/playLists/PlayList";
 import SoBTI from "../components/SoBTI";
+import Layout from './../components/Layout';
 
 const ChartNBTI = () => {
     return(
-        
-        <div style={{
-            padding:"5%",
-            itemAlign:"center",
-        }}>
-            <PlayList />
-            <br/>
-            <SoBTI/>
-            <br/>
-            <MusicBar pagenum={3} />
-        </div>
+        <Layout>
+            <div style={{
+                itemAlign:"center",
+            }}>
+                <PlayList />
+                <br/>
+                <SoBTI/>
+                <br/>
+                <MusicBar pagenum={3} currenttime={"03:57"}/>
+            </div>
+        </Layout>
     )
 }
 

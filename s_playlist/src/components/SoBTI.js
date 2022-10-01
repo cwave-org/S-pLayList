@@ -13,11 +13,11 @@ const SoBTI = () => {
     };
 
     return(
-        <div>
+        <div style={{margin: "0 10px",}}>
             <div>
                 <Button size="sm" children="나의 소BTI" variant="default_fill"/>
             </div>
-            <img src="images/soBTI.png" onClick={openModal} imageStyle={{borderRadius: "10px", overflow: "hidden"}} style={{marginTop:"10px"}}></img>
+            <img src="images/soBTI.png" onClick={openModal} imageStyle={{borderRadius: "10px", overflow: "hidden",}} style={{marginTop:"10px"}}></img>
             <Modal open={modalOpen} close={closeModal}>
                 <main></main>
             </Modal>
