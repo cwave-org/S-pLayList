@@ -20,7 +20,7 @@ const DetailBox = styled.div`
 `;
 const BuyingImg=styled.img`
     width: 90%;
-    opacity: 50%;
+    opacity: 85%;
     height: 100px;
     margin: 0 auto;
     border-radius: 10px;
@@ -90,8 +90,16 @@ const Hr=styled.div`
 `;
 const Communication=()=>{
     const navi=useNavigate();
-    const onDetailClick=()=>{
-        navi("/detail");
+    const onDetailClick=(event)=>{
+        if(event==1){
+            navi("/detail",{state:{img:"./images/cafe.jpg"}});
+        } else if(event==2){
+            navi("/detail",{state:{img:"./images/bread.jpg"}});
+        }
+        else{
+            navi("/detail",{state:{img:"./images/burger.jpg"}});
+        }
+        // console.log(event);
     }
     const onAlertClick=()=>{
         alert("서비스 준비중입니다.");
@@ -104,17 +112,17 @@ const Communication=()=>{
                     <Each>
                         <BuyingImg src="./images/cafe.jpg" />
                         <About>최애카페</About>
-                        <PlayImg onClick={onDetailClick} src="./images/godetail.png" />
+                        <PlayImg onClick={()=>onDetailClick(1)} src="./images/godetail.png" />
                     </Each>
                     <Each>
                         <BuyingImg src="./images/bread.jpg" />
                         <About>좋아하는 디저트</About>
-                        <PlayImg onClick={onDetailClick} src="./images/godetail.png" />
+                        <PlayImg onClick={()=>onDetailClick(2)} src="./images/godetail.png" />
                     </Each>
                     <Each>
                         <BuyingImg src="./images/burger.jpg" />
                         <About>수제버거</About>
-                        <PlayImg onClick={onDetailClick} src="./images/godetail.png" />
+                        <PlayImg onClick={()=>onDetailClick(3)} src="./images/godetail.png" />
                     </Each>
                 </DetailBox>
             </Box>

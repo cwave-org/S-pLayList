@@ -21,18 +21,20 @@ const IUback=styled.div`
     position: fixed;
     width: 100%;
     background-color: #F1F1F3;
-
 `
+const Container=styled.div`
+    margin-bottom: 10%;
+`;
 const Layout=(props)=>{
     return(
-        <>     
+        <Container>     
             <IUback>
                 <Title>IU Pallete</Title>
             </IUback>       
             <main style={{marginTop:"30%"}}>
                 {props.children}
             </main>
-        </>
+        </Container>
         );
     }
 
