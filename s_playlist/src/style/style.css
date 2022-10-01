@@ -5,14 +5,18 @@ body {
 
 .back{
     margin-top: 33%;
+    width: 100%;
 }
 
 .title{
-    margin-top: -32%;
+    /* margin-left: 1%; */
+    text-align: center;
+    /* margin: -25% auto 0; */
+    margin-top: -25%;
     position: fixed;
+    /* width: auto; */
     width: 100%;
     background-color: #F1F1F3;
-    outline:0; resize:none
 }
 
 .titletext{
@@ -21,6 +25,10 @@ body {
     -webkit-text-fill-color: transparent;
     font-style: italic;
     text-align: center;
+    margin: 0 auto;
     margin-top:5%;
-    margin-bottom:5%;
+    font-weight: bold;
+    font-size: 50px;
+    width: fit-content;
+    /* margin-bottom:5%; */
 }
