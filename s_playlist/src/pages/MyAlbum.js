@@ -55,12 +55,12 @@ const MyAlbum=()=>{
 
             <div className="myintroduce">
                 <p style={ {  color: colors1[value] }}>이지은</p>
-                <p style={ {  color: colors3[value] }}>010-1234-5678</p>
-                <p style={ {  color: colors5[value] }}>chungclass1@gmail.com</p>
-                <p style={ {  color: colors7[value] }}>신한카드 인프라 운영팀 팀장</p>
-                <p style={ {  color: colors2[value] }}>서울시 중구 을지로 100</p>
-                <p style={ {  color: colors4[value] }}>숙명여자대학교 소프트웨어학부 졸</p>
-                <p style={ {  color: colors6[value] }}>Fax = 002 - 1234 - 5678</p>
+                <p style={ {  color: colors2[value] }}>010-1234-5678</p>
+                <p style={ {  color: colors3[value] }}>chungclass1@gmail.com</p>
+                <p style={ {  color: colors4[value] }}>신한카드 인프라 운영팀 팀장</p>
+                <p style={ {  color: colors5[value] }}>서울시 중구 을지로 100</p>
+                <p style={ {  color: colors6[value] }}>숙명여자대학교 소프트웨어학부 졸</p>
+                <p style={ {  color: colors7[value] }}>Fax = 002 - 1234 - 5678</p>
             </div>
 
 
