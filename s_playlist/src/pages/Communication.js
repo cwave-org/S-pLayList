@@ -4,9 +4,7 @@ import Button from './../components/Button';
 import styled from "styled-components";
 import {useNavigate} from 'react-router-dom'
 import Layout from './../components/Layout';
-const Title=styled.h1`
-    text-align: center;
-`;
+
 const Box = styled.div`
     width: 100%;
     margin: 3px auto 15px;
@@ -20,7 +18,7 @@ const DetailBox = styled.div`
 `;
 const BuyingImg=styled.img`
     width: 90%;
-    opacity: 85%;
+    /* opacity: 85%; */
     height: 100px;
     margin: 0 auto;
     border-radius: 10px;
