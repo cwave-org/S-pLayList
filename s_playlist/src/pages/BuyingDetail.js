@@ -3,6 +3,7 @@ import Layout from './../components/Layout';
 import MusicBar from './../components/MusicBar';
 import styled from "styled-components";
 import Button from './../components/Button';
+import { useLocation } from "react-router-dom";
 
 
 const Img=styled.img`
@@ -76,13 +77,15 @@ const Hr=styled.div`
     height: 5%;
 `;
 const BuyingDetail=()=>{
+    const loca=useLocation();
+    const imgurl=loca.state.img;
     const onAlertClick=()=>{
         alert("서비스 준비중입니다.");
     }
     return(
         <Layout>
             <Container>
-                <Img src="./images/cafe.jpg"/>
+                <Img src={imgurl}/>
                 <Text>햇살이 따듯했던 어느날 ..</Text>
             </Container>
             <Box>
@@ -92,27 +95,20 @@ const BuyingDetail=()=>{
                 <DetailBox1>
                     <Line>
                         <Profile src="./images/profile.png"/>
-                        <Comment>음식에 쓰는 돈이 가장 많군욤 ㅎㅎㅎㅎ저도 마찬가지랍니다</Comment>
+                        <Comment>예전에 저도 여기 가봤는데 좋더라구요~</Comment>
                         <Date>2022.10.02</Date>
                         <Hr/>
                     </Line>
                     
                     <Line>
                         <Profile src="./images/profile1.png"/>
-                        <Comment>잘 구경하고 갑니다~ <br/>프로필 사진 너무 예쁘게 꾸미셨네요:)</Comment>
+                        <Comment>저랑도 가주세요 ㅎㅎ<br/>프로필 사진 너무 예쁘게 꾸미셨네요:)</Comment>
                         <Date>2022.09.22</Date>
                         <Hr/>
                     </Line>
                     <div onClick={onAlertClick} style={{margin:'5% 3% 0'}}>
                         <Button size="sm" children="나도 한 마디 남기기" variant="default_empty"/>
                     </div>
-                    {/* <Line>
-                        <div style={{position:'relative',left:'55%',top:'25%'}}>
-                        <div onClick={onAlertClick}>
-                            <Button size="sm" children="나도 한 마디 남기기" variant="default_empty"/>
-                        </div>
-                        </div>
-                    </Line> */}
                 </DetailBox1>
             </Box>
 
