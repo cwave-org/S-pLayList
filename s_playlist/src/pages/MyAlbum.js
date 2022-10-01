@@ -61,6 +61,8 @@ const MyAlbum=()=>{
                 <p style={ {  color: colors5[value] }}>서울시 중구 을지로 100</p>
                 <p style={ {  color: colors6[value] }}>숙명여자대학교 소프트웨어학부 졸</p>
                 <p style={ {  color: colors7[value] }}>Fax = 002 - 1234 - 5678</p>
+                <br/>
+                <br/>
             </div>
 
 
