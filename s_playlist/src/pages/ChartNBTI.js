@@ -1,18 +1,20 @@
 import React from "react";
-import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
+import PlayList from "../components/playLists/PlayList";
+import SoBTI from "../components/SoBTI";
 
-const ChartNBTI=()=>{
-
+const ChartNBTI = () => {
     return(
         
-        <div>
-            <Button size="sm" children="이 달의 소비" variant="default_empty"/>
-            <Button size="sm" children="이 달의 소비" variant="default_fill"/>
-        <p>
-        nbti 화면입니다
-        <MusicBar pagenum={3} />
-        </p>
+        <div style={{
+            padding:"5%",
+            itemAlign:"center",
+        }}>
+            <PlayList />
+            <br/>
+            <SoBTI/>
+            <br/>
+            <MusicBar pagenum={3} />
         </div>
     )
 }
