@@ -4,8 +4,9 @@ import React from "react";
 import Communication from "./pages/Communication";
 import MyAlbum from "./pages/MyAlbum";
 import TasteTest from "./pages/TasteTest";
+import TasteTestQue from "./pages/TasteTestQue";
 
-function App() {
+function App({ pageId }) {
   return (
     <Router>
       <Routes>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/communication" element={<Communication/>}></Route>
         <Route path="/myalbum" element={<MyAlbum/>}></Route>
         <Route path="/tastetest" element={<TasteTest/>}></Route>
+        <Route path="/tastetestque" element={<TasteTestQue pageId={pageId}/>}></Route>
       </Routes>
     </Router>
   );
