@@ -87,7 +87,6 @@ const CheckedContentBox = styled.div`
 `
 
 const Card = ({ pageId, pageLoc, checked }) => {
-    console.log(checked)
 
     var arrId = -1;
     var arrQuestion = new Array(

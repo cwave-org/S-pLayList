@@ -4,6 +4,8 @@ import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
 
 const TasteTest=()=>{
+    const pageId=1;
+    const score=0;
 
     return(
         <>
@@ -24,7 +26,7 @@ const TasteTest=()=>{
             </div>
         <div>
             <div className="mainButton">
-                <Button size="sm" children="시작하기" variant="default_fill"></Button>
+                <Button size="sm" children="시작하기" variant="default_fill" pageId={pageId} score={score}></Button>
             </div>
         </div>
         </div>

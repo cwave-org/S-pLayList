@@ -50,19 +50,26 @@ const VARIANTS = {
   `
 };
 
-function Button({ disabled, size, variant, children }) {
+function Button({ disabled, size, variant, children, pageId, score }) {
   const sizeStyle = SIZES[size];
   const variantStyle = VARIANTS[variant];
   const name = children;
 
-  const id=1;
+  console.log(pageId);
+  console.log(score);
 
   const navigate = useNavigate();
   const onMoving = (event) => {
     if(event.target.id == "시작하기"){
       console.log("시작하기 버튼 클릭")
       navigate(`/tastetestque`, {
-        state: { pageId: id, score: 0 },
+        state: { pageId: pageId, score: score },
+      });
+    }
+    else if(event.target.id == "다음"){
+      console.log("다음 버튼 클릭")
+      navigate(`/tastetestque`, {
+        state: { pageId: pageId, score: score },
       });
     }
   };

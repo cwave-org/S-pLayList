@@ -6,15 +6,21 @@ import Button from "./../components/Button";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const TasteTestQue = ({ pageId, score }) => {
-    
+    const location = useLocation();
+    pageId = location.state.pageId;
+    score = location.state.score;
 
+    const newPageId = pageId+1;
+    const newScore = score;
+    console.log(newPageId);
+    console.log(newScore);
+    
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
 
     const [changed, setChanged] = useState(false);
 
-    const location = useLocation();
-    pageId = location.state.pageId;
+   
 
     const navigate = useNavigate();
     const onClickTop = (event) => {
@@ -25,9 +31,6 @@ const TasteTestQue = ({ pageId, score }) => {
         setChanged(true)
         setChecked2(true)
     };
-
-    console.log(checked1)
-    console.log(checked2)
 
     return (
         <>
@@ -48,7 +51,7 @@ const TasteTestQue = ({ pageId, score }) => {
                             <Card pageId={1} pageLoc="bottom" checked={checked2} />
                         </div>
                         <div className="next_button">
-                            <Button size="sm" children="다음" variant="default_fill"></Button>
+                            <Button size="sm" children="다음" variant="default_fill"  pageId={newPageId} score={newScore}></Button>
                         </div>
                     </>
                 ) : (
