@@ -23,7 +23,7 @@ const IUback=styled.div`
     background-color: #F1F1F3;
 `
 const Container=styled.div`
-    margin-bottom: 10%;
+    margin-bottom: 90px;
 `;
 const Layout=(props)=>{
     return(
