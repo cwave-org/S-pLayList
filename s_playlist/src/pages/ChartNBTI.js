@@ -1,19 +1,20 @@
 import React from "react";
 import Button from "../components/Button";
+import Layout from "../components/Layout";
 import MusicBar from './../components/MusicBar';
 
 const ChartNBTI=()=>{
 
     return(
         
-        <div>
+        <Layout>
             <Button size="sm" children="이 달의 소비" variant="default_empty"/>
             <Button size="sm" children="이 달의 소비" variant="default_fill"/>
         <p>
         nbti 화면입니다
         <MusicBar pagenum={3} currenttime={"03:57"}/>
         </p>
-        </div>
+        </Layout>
     )
 }
 

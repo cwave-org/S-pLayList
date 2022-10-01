@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className="title">
-      <b><h1 className="titletext">IU Pallet</h1></b>
-    </div>
-    <div className="back">
+    <BrowserRouter>
       <App />
-    </div>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
