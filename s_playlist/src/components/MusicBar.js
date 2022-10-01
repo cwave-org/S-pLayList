@@ -34,6 +34,7 @@ const Box =styled.div`
 `
 const PlayImg=styled.img`
     margin: 3px auto;
+    height: 45px;
 `;
 
 const MusicBar=({pagenum, currenttime})=>{
@@ -71,13 +72,13 @@ const MusicBar=({pagenum, currenttime})=>{
                 <div>05:16</div>                
             </Box>
             <Box align="play">
-                <PlayImg onClick={onClickPrev} style={{marginRight:'5px'}} src='./images/backplay.png' alt='play'/>
+                <PlayImg onClick={onClickPrev} style={{marginRight:'5px', height:"35px"}} src='./images/backplay.png' alt='play'/>
                 <PlayImg onClick={openModal} src='./images/play.png' alt='play'/>
                 <Modal open={modalOpen} close={closeModal} header="Shinhan pLayList 이용 팁">
                     되감기, 빨리감기 버튼을 누르면 페이지를 이동할 수 있어요.<br/>
                     3페이지의 '나의 소BTI'를 누르면 상세보기가 가능해요.
                 </Modal>
-                <PlayImg onClick={onClickNext} style={{marginLeft:'5px'}} src='./images/afterplay.png' alt='play'/>
+                <PlayImg onClick={onClickNext} style={{marginLeft:'5px', height:"35px"}} src='./images/afterplay.png' alt='play'/>
             </Box>
         </Container>
     );
