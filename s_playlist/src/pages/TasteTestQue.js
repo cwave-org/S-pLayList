@@ -5,24 +5,20 @@ import MusicBar from "./../components/MusicBar";
 import Button from "./../components/Button";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const TasteTestQue = ({ pageId, score }) => {
-    const location = useLocation();
-    pageId = location.state.pageId;
-    score = location.state.score;
+const TasteTestQue = ({}) => {
 
-    const newPageId = pageId+1;
-    const newScore = score;
-    console.log(newPageId);
-    console.log(newScore);
+    console.log("location 실행 전")
+    const location = useLocation();
+    const newPageId = location.state.pageId;
+    const newScore = location.state.score;
+
+    console.log(newPageId) //1
+    console.log(newScore) //0
     
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
-
     const [changed, setChanged] = useState(false);
 
-   
-
-    const navigate = useNavigate();
     const onClickTop = (event) => {
         setChanged(true)
         setChecked1(true)
@@ -31,6 +27,11 @@ const TasteTestQue = ({ pageId, score }) => {
         setChanged(true)
         setChecked2(true)
     };
+    const onClickButton = (event) => {
+        setChanged(false)
+        setChecked1(false)
+        setChecked2(false)
+    }
 
     return (
         <>
@@ -42,28 +43,28 @@ const TasteTestQue = ({ pageId, score }) => {
                 {changed ? (
                     <>
                         <div className="question">
-                            <Question pageId={pageId} />
+                            <Question pageId={newPageId} />
                         </div>
                         <div className="que_top" style={{ marginBottom: "20px" }}>
-                            <Card pageId={pageId} pageLoc="top" checked={checked1} />
+                            <Card pageId={newPageId} pageLoc="top" checked={checked1} /> 
                         </div>
                         <div className="que_bottom" style={{ marginBottom: "20px" }}>
-                            <Card pageId={1} pageLoc="bottom" checked={checked2} />
+                            <Card pageId={newPageId} pageLoc="bottom" checked={checked2} />
                         </div>
-                        <div className="next_button">
-                            <Button size="sm" children="다음" variant="default_fill"  pageId={newPageId} score={newScore}></Button>
+                        <div className="next_button" onClick={onClickButton} style={{ float: "right", marginRight: "40px"}}>
+                            <Button size="sm" children="다음" variant="default_fill" pageId={newPageId} score={newScore}></Button>
                         </div>
                     </>
                 ) : (
                     <>
                         <div className="question">
-                            <Question pageId={pageId} />
+                            <Question pageId={newPageId} />
                         </div>
                         <div className="que_top" style={{ marginBottom: "20px" }} onClick={onClickTop}>
-                            <Card pageId={pageId} pageLoc="top" checked={checked1} />
+                            <Card pageId={newPageId} pageLoc="top" checked={checked1} />
                         </div>
                         <div className="que_bottom" style={{ marginBottom: "20px" }} onClick={onClickBottom}>
-                            <Card pageId={1} pageLoc="bottom" checked={checked2} />
+                            <Card pageId={newPageId} pageLoc="bottom" checked={checked2} />
                         </div>
                     </>
                 )}

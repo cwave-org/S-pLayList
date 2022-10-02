@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
 
 const TasteTest=()=>{
-    const pageId=1;
+    const pageId=0;
     const score=0;
 
     return(
