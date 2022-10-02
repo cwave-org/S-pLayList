@@ -18,7 +18,7 @@ const Box =styled.div`
     font-size: var(--button-font-size, 1.3rem);
     font-weight: bold;
     justify-content: center;
-    text-align: cneter;
+    text-align: center;
     margin-bottom: 10%;
 `
 
