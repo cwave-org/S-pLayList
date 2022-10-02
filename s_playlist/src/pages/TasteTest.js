@@ -11,7 +11,7 @@ const TasteTest=()=>{
     return(
         <>
         <div className="topContent">
-
+            <Layout />
         </div>
         
         <div className="mainContent">

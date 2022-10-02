@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import Question from "../components/Question";
 import MusicBar from "./../components/MusicBar";
 import Button from "./../components/Button";
+import Layout from './../components/Layout';
 import { useNavigate, useLocation } from "react-router-dom";
 
 const TasteTestQue = ({}) => {
@@ -38,7 +39,7 @@ const TasteTestQue = ({}) => {
     return (
         <>
             <div className="topContent">
-
+                <Layout />
             </div>
 
             <div className="mainContent">

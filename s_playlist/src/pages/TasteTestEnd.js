@@ -3,6 +3,7 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
 import styled, {css} from "styled-components";
+import Layout from './../components/Layout';
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
@@ -31,7 +32,7 @@ const TasteTestEnd=()=>{
     return(
         <>
         <div className="topContent">
-
+            <Layout />
         </div>
         
         <div className="mainContent">

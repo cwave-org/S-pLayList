@@ -16,7 +16,7 @@ function App({ pageId }) {
           <Route path="/3" element={<ChartNBTI/>}></Route>
           <Route path="/4" element={<Communication/>}></Route>
           <Route path="/1" element={<MyAlbum/>}></Route>
-          <Route path="/tastetest" element={<TasteTest/>}></Route>
+          <Route path="/2" element={<TasteTest/>}></Route>
           <Route path="/tastetestque" element={<TasteTestQue pageId={pageId}/>}></Route>
           <Route path="/tastetestend" element={<TasteTestEnd/>}></Route>
           <Route path="/detail" element={<BuyingDetail/>}></Route>
