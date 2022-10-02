@@ -12,8 +12,8 @@ const TasteTestQue = ({}) => {
     const newPageId = location.state.pageId;
     const newScore = location.state.score;
 
-    console.log(newPageId) //1
-    console.log(newScore) //0
+    console.log(newPageId) 
+    console.log(newScore) 
     
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);

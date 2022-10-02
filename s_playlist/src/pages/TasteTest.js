@@ -14,11 +14,11 @@ const TasteTest=()=>{
         </div>
         
         <div className="mainContent">
-            <div className="mainimg">
-                <img src = "./images/TasteTest.png" width="80%"></img>
+            <div className="mainimg" style={{alignContent : "center"}}>
+                <img src = "./images/TasteTest.png" width="100%"></img>
             </div>
             <div className="mainText">
-                <div>
+                <div style={{ textAlign: "center" }}>
                     카드 사용 내역을 기반으로 하는 <br></br>
                     객관적인 데이터! <br></br>
                     이지은님도 몰랐던 이지은님의 취향을 맞춰볼까? <br></br>
