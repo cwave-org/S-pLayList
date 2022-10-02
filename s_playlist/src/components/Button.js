@@ -59,7 +59,7 @@ function Button({ disabled, size, variant, children, pageId, score }) {
   const navigate = useNavigate();
   const newPageId = pageId+1
   const newScore = score;
-  console.log("버튼 클릭시 점수", newScore)
+  //console.log("버튼 클릭시 점수", newScore)
 
   const onMoving = (event) => {
     if(event.target.id == "시작하기"){

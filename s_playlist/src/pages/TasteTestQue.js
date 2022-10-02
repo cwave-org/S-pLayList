@@ -18,18 +18,18 @@ const TasteTestQue = ({}) => {
 
     const onClickTop = (event) => {
         if(newPageId==2 || newPageId ==3 || newPageId ==4) setNewScore(newScore+1);
-        console.log("점수" + location.state.score + "->" + newScore);
+        //console.log("점수" + location.state.score + "->" + newScore);
         setChanged(true)
         setChecked1(true)
     };
     const onClickBottom = (event) => {
         if(newPageId==1 || newPageId ==5) setNewScore(newScore+1);
-        console.log("점수" + location.state.score + "->" + newScore);
+        //console.log("점수" + location.state.score + "->" + newScore);
         setChanged(true)
         setChecked2(true)
     };
     const onClickButton = (event) => {
-        console.log("button클릭시", newScore)
+        //console.log("정답 전달", newScore)
         setChanged(false)
         setChecked1(false)
         setChecked2(false)
