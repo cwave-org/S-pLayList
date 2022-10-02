@@ -38,6 +38,7 @@ const PlayImg=styled.img`
 `;
 
 const MusicBar=({pagenum, currenttime})=>{
+
     const [modalOpen, setModalOpen] = useState(false);
 
     const openModal = () => {

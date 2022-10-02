@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled, { css } from "styled-components";
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
@@ -49,15 +51,48 @@ const VARIANTS = {
   `
 };
 
-function Button({ disabled, size, variant, children }) {
+function Button({ disabled, size, variant, children, pageId, score }) {
   const sizeStyle = SIZES[size];
   const variantStyle = VARIANTS[variant];
+  const name = children;
+
+  const navigate = useNavigate();
+  const newPageId = pageId+1
+  const newScore = score;
+  //console.log("버튼 클릭시 점수", newScore)
+
+  const onMoving = (event) => {
+    if(event.target.id == "시작하기"){
+      navigate(`/tastetestque`, {
+        state: { pageId: newPageId, score: newScore },
+      });
+    }
+    else if(event.target.id == "재도전하기"){
+      navigate(`/tastetestque`, {
+        state: { pageId: newPageId, score: newScore },
+      });
+    }
+    else if(event.target.id == "다음"){
+      if(newPageId > 5){
+        navigate(`/tastetestend`, {
+          state: { score: newScore },
+        });
+      }
+      else{
+        navigate(`/tastetestque`, {
+          state: { pageId: newPageId, score: newScore },
+        });
+      }
+    }
+  };
 
   return (
     <StyledButton
       disabled={disabled}
       sizeStyle={sizeStyle}
       variantStyle={variantStyle}
+      id={name}
+      onClick={onMoving}
     >
       {children}
     </StyledButton>
