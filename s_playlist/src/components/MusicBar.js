@@ -27,7 +27,7 @@ const PlayImg=styled.img`
 `;
 
 const MusicBar=({pagenum, currenttime})=>{
-    console.log(pagenum)
+    //(pagenum)
     if(pagenum==1){
 
     }

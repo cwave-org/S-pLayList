@@ -104,12 +104,15 @@ const Card = ({ pageId, pageLoc, checked }) => {
         2200, 1923, 1234, 929, 1232, 1938, 4732, 8302, 10002, 9981 
     );
 
+    var arrAnswer = new Array(0,1,1,0,1,0,0,1,0,1); //1이 정담, 0이 오답
+    
     if (pageLoc == "top") {
         arrId = pageId * 2 - 2;
     }
     else if (pageLoc == "bottom") {
         arrId = pageId * 2 - 1;
     }
+
     const imgsrc = "./images/" + arrQuestion[arrId] + ".png";
 
     return (

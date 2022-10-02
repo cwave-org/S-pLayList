@@ -7,27 +7,29 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const TasteTestQue = ({}) => {
 
-    console.log("location 실행 전")
     const location = useLocation();
     const newPageId = location.state.pageId;
-    const newScore = location.state.score;
-
-    console.log(newPageId) 
-    console.log(newScore) 
+    const [newScore, setNewScore] = useState(location.state.score); 
+    // var newScore = location.state.score;
     
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
     const [changed, setChanged] = useState(false);
 
     const onClickTop = (event) => {
+        if(newPageId==2 || newPageId ==3 || newPageId ==4) setNewScore(newScore+1);
+        console.log("점수" + location.state.score + "->" + newScore);
         setChanged(true)
         setChecked1(true)
     };
     const onClickBottom = (event) => {
+        if(newPageId==1 || newPageId ==5) setNewScore(newScore+1);
+        console.log("점수" + location.state.score + "->" + newScore);
         setChanged(true)
         setChecked2(true)
     };
     const onClickButton = (event) => {
+        console.log("button클릭시", newScore)
         setChanged(false)
         setChecked1(false)
         setChecked2(false)

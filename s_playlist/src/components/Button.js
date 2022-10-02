@@ -58,29 +58,29 @@ function Button({ disabled, size, variant, children, pageId, score }) {
 
   const navigate = useNavigate();
   const newPageId = pageId+1
+  const newScore = score;
+  console.log("버튼 클릭시 점수", newScore)
 
   const onMoving = (event) => {
     if(event.target.id == "시작하기"){
       navigate(`/tastetestque`, {
-        state: { pageId: newPageId, score: score },
+        state: { pageId: newPageId, score: newScore },
       });
     }
     else if(event.target.id == "재도전하기"){
       navigate(`/tastetestque`, {
-        state: { pageId: newPageId, score: score },
+        state: { pageId: newPageId, score: newScore },
       });
     }
     else if(event.target.id == "다음"){
-      console.log("다음 버튼 클릭")
-      console.log(newPageId)
       if(newPageId > 5){
         navigate(`/tastetestend`, {
-          state: { score: score },
+          state: { score: newScore },
         });
       }
       else{
         navigate(`/tastetestque`, {
-          state: { pageId: newPageId, score: score },
+          state: { pageId: newPageId, score: newScore },
         });
       }
     }
