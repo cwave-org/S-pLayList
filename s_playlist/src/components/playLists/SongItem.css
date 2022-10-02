@@ -1,0 +1,64 @@
+.song-item {
+    align-items: center;
+    width: 98%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 8% 15% 65% 12%;
+    padding: 10px 5px;
+    transition: all 0.1s ease-in-out;
+    border-bottom: solid 1px #eee;
+}
+
+.song-item:hover {
+    background-color: #1e293b;
+    border-radius: 3px;
+    color: #cbd5e1;
+    cursor: default;
+}
+
+.index {
+    width: 30px;
+    height: 22px;
+    color: #4646F2;
+    font-size: 19px;
+    text-align: center;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+}
+.song-item > * {
+    display: flex;
+    font-weight: bold;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+}
+
+.song-item > .name {
+    color: #000;
+    justify-content: flex-start !important;
+}
+
+.item-control > svg,
+a {
+    color: inherit;
+}
+a >svg {
+    color: inherit;
+    transition: all 0.1s ease-in-out;
+}
+a > svg:hover {
+    color: #eee;
+}
+
+.small-icon {
+    width: 16px;
+    height: 16px;
+    color: inherit;
+    margin: 0px;
+}
+
+.song-item.header > * > * {
+    color: inherit;
+}

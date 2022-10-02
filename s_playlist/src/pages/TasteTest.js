@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
+import Layout from './../components/Layout';
 
 const TasteTest=()=>{
     const pageId=0;
