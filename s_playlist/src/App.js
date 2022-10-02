@@ -5,6 +5,7 @@ import Communication from "./pages/Communication";
 import MyAlbum from "./pages/MyAlbum";
 import TasteTest from "./pages/TasteTest";
 import TasteTestQue from "./pages/TasteTestQue";
+import TasteTestEnd from "./pages/TasteTestEnd";
 
 function App({ pageId }) {
   return (
@@ -15,6 +16,7 @@ function App({ pageId }) {
         <Route path="/myalbum" element={<MyAlbum/>}></Route>
         <Route path="/tastetest" element={<TasteTest/>}></Route>
         <Route path="/tastetestque" element={<TasteTestQue pageId={pageId}/>}></Route>
+        <Route path="/tastetestend" element={<TasteTestEnd/>}></Route>
       </Routes>
     </Router>
   );

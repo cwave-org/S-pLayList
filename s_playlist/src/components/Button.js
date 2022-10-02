@@ -61,20 +61,23 @@ function Button({ disabled, size, variant, children, pageId, score }) {
 
   const onMoving = (event) => {
     if(event.target.id == "시작하기"){
-      console.log("시작하기 버튼 클릭")
-      console.log(pageId)
-      console.log(newPageId)
       navigate(`/tastetestque`, {
         state: { pageId: newPageId, score: score },
       });
     }
     else if(event.target.id == "다음"){
       console.log("다음 버튼 클릭")
-      console.log(pageId)
       console.log(newPageId)
-      navigate(`/tastetestque`, {
-        state: { pageId: newPageId, score: score },
-      });
+      if(newPageId > 5){
+        navigate(`/tastetestend`, {
+          state: { score: score },
+        });
+      }
+      else{
+        navigate(`/tastetestque`, {
+          state: { pageId: newPageId, score: score },
+        });
+      }
     }
   };
 
