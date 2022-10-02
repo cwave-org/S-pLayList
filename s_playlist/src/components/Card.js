@@ -6,14 +6,13 @@ const Box = styled.div`
     display: flex;
     flex-direction: row; 
     height: 50%;
+    width: 70%;
     justify-content: center;
     border: 1px solid #828282;
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 1rem;
     line-height: 1.5;
-    width: 70%;
-    height: 20&;
     margin: 0 auto;
     justify-content: center;
 `
@@ -22,6 +21,7 @@ const CheckedBox = styled.div`
     display: flex;
     flex-direction: row; 
     height: 50%;
+    width: 70%;
     justify-content: center;
     border: 1px solid #99ADF8;
     background-color: #99ADF8;
@@ -30,8 +30,6 @@ const CheckedBox = styled.div`
     border-radius: 8px;
     font-size: 1rem;
     line-height: 1.5;
-    width: 70%;
-    height: 20&;
     margin: 0 auto;
     justify-content: center;
 `
@@ -92,10 +90,18 @@ const Card = ({ pageId, pageLoc, checked }) => {
     var arrQuestion = new Array(
         "버거킹",
         "롯데리아",
+        "스타벅스",
+        "할리스커피",
+        "야구",
+        "축구",
+        "떡볶이",
+        "마라탕",
+        "오프라인 쇼핑",
+        "온라인 쇼핑"
     ); //배열선언
 
     var arrHeart = new Array(
-        2200, 1923,
+        2200, 1923, 1234, 929, 1232, 1938, 4732, 8302, 10002, 9981 
     );
 
     if (pageLoc == "top") {

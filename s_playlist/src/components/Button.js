@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled, { css } from "styled-components";
 <style>
@@ -55,21 +56,24 @@ function Button({ disabled, size, variant, children, pageId, score }) {
   const variantStyle = VARIANTS[variant];
   const name = children;
 
-  console.log(pageId);
-  console.log(score);
-
   const navigate = useNavigate();
+  const newPageId = pageId+1
+
   const onMoving = (event) => {
     if(event.target.id == "시작하기"){
       console.log("시작하기 버튼 클릭")
+      console.log(pageId)
+      console.log(newPageId)
       navigate(`/tastetestque`, {
-        state: { pageId: pageId, score: score },
+        state: { pageId: newPageId, score: score },
       });
     }
     else if(event.target.id == "다음"){
       console.log("다음 버튼 클릭")
+      console.log(pageId)
+      console.log(newPageId)
       navigate(`/tastetestque`, {
-        state: { pageId: pageId, score: score },
+        state: { pageId: newPageId, score: score },
       });
     }
   };
