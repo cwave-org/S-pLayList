@@ -4,7 +4,9 @@ import Button from "../components/Button";
 import MusicBar from './../components/MusicBar';
 
 const TasteTestEnd=()=>{
-
+    const pageId=0;
+    const score=0;
+    
     const location = useLocation();
     const newScore = location.state.score;
 
@@ -15,8 +17,8 @@ const TasteTestEnd=()=>{
         </div>
         
         <div className="mainContent">
-            <div className="mainimg">
-                <img src = "./images/TasteTestTitle.png" width="80%"></img>
+            <div className="mainimg" style={{alignContent : "center"}}>
+                <img src = "./images/TasteTestTitle.png" width="100%"></img>
             </div>
             <div className="mainText">
                 <div>
@@ -27,7 +29,7 @@ const TasteTestEnd=()=>{
             </div>
         <div>
             <div className="mainButton">
-                <Button size="sm" children="시작하기" variant="default_fill"></Button>
+                <Button size="sm" children="재도전하기" variant="default_fill" pageId={pageId} score={score}></Button>
             </div>
         </div>
         </div>

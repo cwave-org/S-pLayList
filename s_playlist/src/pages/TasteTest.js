@@ -25,7 +25,7 @@ const TasteTest=()=>{
                 </div>
             </div>
         <div>
-            <div className="mainButton">
+            <div className="mainButton" style={{alignContent : "center"}}>
                 <Button size="sm" children="시작하기" variant="default_fill" pageId={pageId} score={score}></Button>
             </div>
         </div>

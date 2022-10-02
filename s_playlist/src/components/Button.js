@@ -65,6 +65,11 @@ function Button({ disabled, size, variant, children, pageId, score }) {
         state: { pageId: newPageId, score: score },
       });
     }
+    else if(event.target.id == "재도전하기"){
+      navigate(`/tastetestque`, {
+        state: { pageId: newPageId, score: score },
+      });
+    }
     else if(event.target.id == "다음"){
       console.log("다음 버튼 클릭")
       console.log(newPageId)
