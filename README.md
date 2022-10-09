@@ -1,9 +1,6 @@
 <div align="center">
-<img src="https://user-images.githubusercontent.com/81628744/194468658-8b93e150-967f-44d8-a102-8318ef34de1a.png" width="70%">
+<img src="https://user-images.githubusercontent.com/92364973/194752660-dc93bf10-cedf-4758-bc7d-29d1aba19b7b.png" width="70%">
 </div>
-[신한금융그룹 빅데이터 해커톤] 트랙1. 신사업아이디어 - 신한 pLayList
-<br></br>
-
 
 
 ## 🏆 신한카드 신사업 아이디어 우승
@@ -27,3 +24,9 @@
 ![슬라이드25](https://user-images.githubusercontent.com/92364973/194266136-dfaac83e-85a6-4770-81fa-7c1e05952a05.PNG)
 ![슬라이드26](https://user-images.githubusercontent.com/92364973/194266146-265fa53f-e977-422b-a9ec-322ea469151b.PNG)
 ![슬라이드27](https://user-images.githubusercontent.com/92364973/194266151-38eaa1ec-d770-466a-9dc9-2a6f193b82b1.PNG)
+
+## ❄ Team Member 
+|Jueun Kim<br/>([@Jueunkim429](https://github.com/Jueunkim429))|Yujin Na<br/>([@nayujin-dev](https://github.com/nayujin-dev))|Nayeon Ryu<br/>([@Nayeon-Ryu](https://github.com/Nayeon-Ryu))|Sumin Lee<br/>([@summit45](https://github.com/summit45))|
+|:----------:|:----------:|:----------:|:----------:|
+|Developer<br/>Project Manager|Developer<br/>Project Manager|Developer<br/>Project Manager|Team Leader<br/>Developer<br/>Project Manager|
+|![](https://github.com/Jueunkim429.png)|![](https://github.com/nayujin-dev.png)|![](https://github.com/Nayeon-Ryu.png)|![](https://github.com/summit45.png)|
